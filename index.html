@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script>window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+          t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      
+        t._e = [];
+        t.ready = function(f) {
+          t._e.push(f);
+        };
+      
+        return t;
+      }(document, "script", "twitter-wjs"));</script>
+    <title>In Six Words</title>
+</head>
+<body>
+    <div class="grid">
+        <!-- home display -->
+        <button class="material">
+            <span class="material-icons-outlined md-dark">
+                dark_mode
+            </span>
+            <span class="material-icons-outlined md-light">
+                light_mode
+            </span>
+        </button>
+        <div class="container">
+            <h1>In Six Words</h1>
+            <div class="intro-box">
+                <p class="intro">
+                    Can you write a story in six words? Here's one, credited to American author Ernest Hemingway (though the validity is doubted): <span>&ldquo;For sale: baby shoes. Never worn&rdquo;</span>. 
+                </p>
+            </div>
+            <div class="input-box">
+                <input type="text" id="story" class="story" placeholder="Write here..." autofocus>
+            </div>
+            <div class="button-group">
+                <div class="flex-group">
+                    <button id="clear" class="child-button button">Clear</button>
+                    <button id="done" class="child-button button">Done</button>
+                </div>
+                <div class="flex-center">
+                    <button id="getRandom" class="button">Give starting letter</button>
+                </div>
+            </div>
+        </div>
+        <!-- story display -->
+        <div class="story-hero">
+            <p class="small-text">In six words</p>
+            <p class="large-text"></p>
+            <div class="new-button-group">
+                <button id="edit" class="new-button button">Edit</button>
+                <button id="new" class="new-button button">New</button>
+                <div id="twitter-container"></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
